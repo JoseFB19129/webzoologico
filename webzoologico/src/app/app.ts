@@ -1,9 +1,10 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet, FormsModule} from '@angular/router';
-
+import { RouterOutlet} from '@angular/router';
+/*import {FormsModule} from '@angular/forms';*/
+import { AnimalComponent} from './components/animal-component/animal-component';
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, AnimalComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
