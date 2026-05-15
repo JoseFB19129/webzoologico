@@ -2,14 +2,15 @@ import { Component } from '@angular/core';
 import { AnimalService } from '../../service/animal-service';
 import { ToastrService } from 'ngx-toastr';
 import { take } from 'rxjs';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-animal-component',
-  imports: [],
+  standalone: true,
+  imports: [ReactiveFormsModule], //IMPORTACION SUGERIDA IA
   templateUrl: './animal-component.html',
-  styleUrl: './animal-component.css',
+  styleUrl: './animal-component.css', //corchetes sugeridos IA
 })
 export class AnimalComponent {
   animalList:any = [];
