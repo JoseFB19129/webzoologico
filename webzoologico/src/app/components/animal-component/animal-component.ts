@@ -9,11 +9,16 @@ import { AnimalService } from '../../service/animal-service';
 })
 export class AnimalComponent {
   animalList:any = [];
-  constructor(private animalService:AnimalService){
+  constructor(private animalService:AnimalService){}
     getAllAnimals(){
       this.animalService.getAllAnimalData().subscribe((data: {}) => {
         this.animalList = data;
-      })
+      });
     }
-  }
+
+    ngOnInit(){
+      this.getAllAnimals();
+    }
+
+  
 }
